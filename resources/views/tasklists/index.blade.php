@@ -9,7 +9,8 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <td>タスク</td>
+                    <th>タスク</th>
+                    <th>ステータス</th>
                 </tr>
             </thead>
             <tbody>
@@ -17,6 +18,7 @@
                 <tr>
                     <td><a href="{{ action('TasksController@show', $task->id) }}">{{$task->id}}</a></td>
                     <td>{{ $task->content }}</td>
+                    <td>{{ $task->status }}</td>
                 </tr>
                 @endforeach
             </tbody>

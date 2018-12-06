@@ -2,6 +2,8 @@
 
 @section('content')
 
+    @include('common.validate')
+
     <h1>No. {{ $task->id }}のタスク編集</h1>
     <div class="row">
         <div class="col-6">
@@ -10,6 +12,11 @@
                 <div class="form-group">
                     {!! Form::label('content', 'タスク：') !!}
                     {!! Form::text('content', null, ['class' => 'form-control']) !!}
+                </div>
+                
+                <div class="form-group">
+                    {!! Form::label('status', 'ステータス：') !!}
+                    {!! Form::text('status', null, ['class' => 'form-control']) !!}
                 </div>
                 
                 {!! Form::submit('更新', ['class' => 'btn btn-light']) !!}
